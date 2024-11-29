@@ -1,0 +1,128 @@
+/* 화면 중앙 정렬 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e3f2fd; /* 연한 블루 배경 */
+    font-family: Arial, sans-serif;
+}
+
+/* 모바일 기기 모양 */
+.phone {
+    width: 375px;
+    height: 667px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 상단 상태바 */
+.status-bar {
+    background-color: #1976d2; /* 짙은 블루 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+/* 초기 로그인 버튼 */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* 비밀번호 입력창 스타일 */
+#passwordMenu input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0; /* 위아래 간격 추가 */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 완료 및 뒤로가기 버튼 간격 조정 */
+.login-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #2196f3; /* 기본 블루 */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* 버튼 간격 추가 */
+}
+
+.login-button:last-child {
+    margin-bottom: 0; /* 마지막 버튼은 아래 여백 제거 */
+}
+
+.login-button:hover {
+    background-color: #1976d2; /* 짙은 블루 */
+}
+
+/* 로그인 폼 스타일 */
+#loginForm input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 메인 메뉴 옵션 스타일 */
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 150px; /* 폭을 더 넓게 조정 */
+    background-color: #bbdefb; /* 연한 블루 */
+    border-radius: 15px;
+    font-size: 20px; /* 텍스트 크기를 키움 */
+    color: #0d47a1; /* 진한 블루 텍스트 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 15px 0; /* 간격을 조정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    word-wrap: break-word; /* 텍스트가 넘칠 경우 줄바꿈 */
+}
+
+.option:hover {
+    background-color: #90caf9; /* 밝은 블루 */
+}
+
+/* 추가 페이지 스타일 */
+#locker-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#locker-options .option {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbdefb; /* 연한 블루 */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    color: #0d47a1; /* 진한 블루 */
+}
+
+#locker-options .option:hover {
+    background-color: #90caf9; /* 밝은 블루 */
+}

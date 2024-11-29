@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 인터페이스</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS 파일 분리 -->
+</head>
+<body>
+    <div class="phone">
+        <div class="status-bar">
+            <p>달빛 한성 식당</p>
+        </div>
+        <div class="content" id="initialContent">
+            <button class="login-button" onclick="showLoginForm()">로그인</button>
+        </div>
+        <div class="content" id="loginForm" style="display: none;">
+            <input type="text" id="username" placeholder="학번">
+            <input type="password" id="password" placeholder="비밀번호">
+            <button class="login-button" onclick="login()">로그인</button>
+        </div>
+        <div class="content" id="mainMenu" style="display: none;">
+            <div class="menu-title">
+                <p>&lt;메뉴&gt;</p>
+            </div>
+            <div class="option" onclick="showSubMenu('중식')">중식</div>
+            <div class="option" onclick="showSubMenu('한식')">한식</div>
+            <div class="option" onclick="showSubMenu('일식')">일식</div>
+        </div>
+        <div class="content" id="subMenu" style="display: none;">
+            <div id="submenu-title" class="menu-title"></div>
+            <div id="submenu-options"></div>
+            <button class="login-button" onclick="backToMainMenu()">뒤로가기</button>
+        </div>
+        <div class="content" id="lockerMenu" style="display: none;">
+            <p>사물함 번호를 선택하세요 (1~20):</p>
+            <div id="locker-options"></div>
+            <button class="login-button" onclick="backToSubMenu()">뒤로가기</button>
+        </div>
+        <div class="content" id="qrPasswordMenu" style="display: none;">
+            <p>예약 방식을 선택하세요:</p>
+            <button class="option" onclick="showQR()">QR</button>
+            <button class="option" onclick="showPasswordForm()">비밀번호</button>
+            <button class="login-button" onclick="backToLockerMenu()">뒤로가기</button>
+        </div>
+        <div class="content" id="qrCodeSection" style="display: none;">
+            <img id="qrCodeImage" src="images/generic_qr_code.jpg" alt="QR Code" style="width: 200px; height: 200px;">
+            <button class="login-button" onclick="backToMainMenu()">메인 메뉴로</button>
+        </div>
+        
+        <div class="content" id="passwordMenu" style="display: none;">
+            <p>비밀번호를 설정하세요 (4자리):</p>
+            <input type="password" id="setPassword" maxlength="4" placeholder="비밀번호 입력">
+            <button class="login-button" onclick="completeReservation()">완료</button>
+            <button class="login-button" onclick="backToQRPasswordMenu()">뒤로가기</button>
+        </div>
+        <div class="content" id="reservationComplete" style="display: none;">
+            <p>예약이 완료되었습니다!</p>
+            <button class="login-button" onclick="backToMainMenu()">메인 메뉴로</button>
+        </div>
+    </div>
+    <script src="js/login.js"></script> <!-- JavaScript 파일 분리 -->
+</body>
+</html>
